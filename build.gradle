@@ -217,10 +217,12 @@ publishing {
     }
     publications {
         stubs(MavenPublication) {
+	    groupId='com.ofg'
             artifactId "${project.name}-stubs"
             artifact stubsJar
         }
         mavenJava(MavenPublication) {
+            groupId='com.ofg'
             from components.java
             pom.withXml {
                 //Remove dependencies - everything is embedded in JAR created by Spring Boot
