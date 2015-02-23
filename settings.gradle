@@ -1,2 +1,2 @@
 groupId='com.ofg'
-name='loan-application-decision-maker-pl'
+rootProject.name='loan-application-decision-maker-pl'
