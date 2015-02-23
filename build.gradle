@@ -221,6 +221,8 @@ publishing {
         }
         mavenJava(MavenPublication) {
             groupId projectGroupId
+            artifactId project.name
+            version currentVersion
             from components.java
             pom.withXml {
                 //Remove dependencies - everything is embedded in JAR created by Spring Boot
