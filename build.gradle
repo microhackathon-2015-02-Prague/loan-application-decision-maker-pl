@@ -39,6 +39,8 @@ ext {
     //microInfraSpring version moved to gradle.properties
 }
 
+version=currentVersion
+
 configurations {
     all {
         resolutionStrategy {
@@ -215,14 +217,10 @@ publishing {
     }
     publications {
         stubs(MavenPublication) {
-            groupId projectGroupId
             artifactId "${project.name}-stubs"
             artifact stubsJar
         }
         mavenJava(MavenPublication) {
-            groupId projectGroupId
-            artifactId project.name
-            version currentVersion
             from components.java
             pom.withXml {
                 //Remove dependencies - everything is embedded in JAR created by Spring Boot
